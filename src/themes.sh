@@ -54,9 +54,9 @@ case $SELECTED_THEME in
 "custom")
   declare -A THEME=(
     ["background"]="#000000"
-    ["foreground"]="#343b58"
+    ["foreground"]="#545b88"
     ["black"]="#000000"
-    ["blue"]="#34548a"
+    ["blue"]="#0527AD"
     ["cyan"]="#0f4b6e"
     ["green"]="#33635c"
     ["magenta"]="#5a4a78"
