@@ -56,7 +56,7 @@ case $SELECTED_THEME in
     ["background"]="#000000"
     ["foreground"]="#aaaacc"
     ["black"]="#000000"
-    ["blue"]="#000000"
+    ["blue"]="#2B97FA"
     ["cyan"]="#0f4b6e"
     ["green"]="#0DD3BB"
     ["magenta"]="#5a4a78"
@@ -64,7 +64,7 @@ case $SELECTED_THEME in
     ["white"]="#343b58"
     ["yellow"]="#8f5e15"
 
-    ["bblack"]="#2B97FA"
+    ["bblack"]="#000000"
     ["bblue"]="#2B97FA"
     ["bcyan"]="#0f4b6e"
     ["bgreen"]="#0DD3BB"
