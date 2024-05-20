@@ -52,7 +52,7 @@ zoom_number="#($SCRIPTS_PATH/custom-number.sh #P $zoom_id_style)"
 date_and_time="$($SCRIPTS_PATH/datetime-widget.sh)"
 current_path="#($SCRIPTS_PATH/path-widget.sh #{pane_current_path})"
 battery_status="#($SCRIPTS_PATH/battery-widget.sh)"
-right_append="$($SCRIPTS_PATH/right_append.sh)"
+right_append="$($SCRIPTS_PATH/right-append.sh)"
 
 #+--- Bars LEFT ---+
 # Session name
