@@ -16,6 +16,6 @@ source "$ROOT_DIR/src/themes.sh"
 declare -A NET_ICONS
 DOCKER_ICONS[box]="#[fg=${THEME[blue]}]"
 
-OUTPUT="${RESET}░ ${DOCKER_ICONS[box]}#{docker_status}"
+OUTPUT="${RESET}░ ${DOCKER_ICONS[box]}#{docker_status} "
 
 echo -e "$OUTPUT"

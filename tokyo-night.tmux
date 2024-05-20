@@ -42,7 +42,7 @@ pane_id_style="${pane_id_style:-$default_pane_id_style}"
 zoom_id_style="${zoom_id_style:-$default_zoom_id_style}"
 
 netspeed="#($SCRIPTS_PATH/netspeed.sh)"
-docker="#($SCRIPTS_PATH/docker.sh)"
+docker="$($SCRIPTS_PATH/docker.sh)"
 cmus_status="#($SCRIPTS_PATH/music-tmux-statusbar.sh)"
 git_status="#($SCRIPTS_PATH/git-status.sh #{pane_current_path})"
 wb_git_status="#($SCRIPTS_PATH/wb-git-status.sh #{pane_current_path} &)"
