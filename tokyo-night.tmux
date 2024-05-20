@@ -42,6 +42,7 @@ pane_id_style="${pane_id_style:-$default_pane_id_style}"
 zoom_id_style="${zoom_id_style:-$default_zoom_id_style}"
 
 netspeed="#($SCRIPTS_PATH/netspeed.sh)"
+docker="#($SCRIPTS_PATH/docker.sh)"
 cmus_status="#($SCRIPTS_PATH/music-tmux-statusbar.sh)"
 git_status="#($SCRIPTS_PATH/git-status.sh #{pane_current_path})"
 wb_git_status="#($SCRIPTS_PATH/wb-git-status.sh #{pane_current_path} &)"
@@ -65,5 +66,5 @@ tmux set -g window-status-current-format "$RESET#[fg=${THEME[green]},bg=${THEME[
 tmux set -g window-status-format "$RESET#[fg=${THEME[foreground]}] #{?#{==:#{pane_current_command},ssh},󰣀,}${RESET} $window_number #W#[nobold,dim]#{?window_zoomed_flag, $zoom_number, $custom_pane} #[fg=${THEME[yellow]}]#{?window_last_flag,󰁯 , } "
 
 #+--- Bars RIGHT ---+
-tmux set -g status-right "#[fg=${THEME[blue]}]#{docker_status}$RESET $battery_status$current_path$cmus_status$netspeed$git_status$wb_git_status$date_and_time"
+tmux set -g status-right "$RESET $docker$battery_status$current_path$cmus_status$netspeed$git_status$wb_git_status$date_and_time"
 tmux set -g window-status-separator ""
