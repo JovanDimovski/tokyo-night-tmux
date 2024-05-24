@@ -32,4 +32,4 @@ free_memory_gb=$(echo "$total_memory_gb - $avail_memory_gb" | bc)
 
 formatted_output="${RESET}░ ${free_memory_gb}G/${total_memory_gb}G #[fg=${THEME[white]}]${size2}/${size1}"
 # Print the result
-echo -e $formatted_output
+echo -e "$formatted_output"
