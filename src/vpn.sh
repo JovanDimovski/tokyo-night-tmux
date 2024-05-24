@@ -9,6 +9,7 @@ source "$ROOT_DIR/lib/netspeed.sh"
 
 # Get network interface
 INTERFACE=$(tmux show-option -gv @tokyo-night-tmux_vpn_iface 2>/dev/null)
+INTERFACE_NAME=$(tmux show-option -gv @tokyo-night-tmux_vpn_iface_name 2>/dev/null)
 
 # Determine interface if not set
 if [[ -z $INTERFACE ]]; then
@@ -21,7 +22,7 @@ NET_ICONS[vpn]="#[fg=${THEME[foreground]}]\U000f0a60"
 # Detect interface IPv4 and state
 if IPV4_ADDR=$(interface_ipv4 "$INTERFACE"); then
   IFACE_STATUS="up"
-  OUTPUT="${RESET}░ ${NET_ICONS[vpn]} $INTERFACE $IFACE_STATUS"
+  OUTPUT="${RESET}░ ${NET_ICONS[vpn]} $INTERFACE_NAME $IFACE_STATUS "
 else
   IFACE_STATUS="down"
   OUTPUT=""
