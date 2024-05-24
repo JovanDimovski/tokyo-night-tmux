@@ -2,6 +2,10 @@
 ENABLED=$(tmux show-option -gv @tokyo-night-tmux_show_memory 2>/dev/null)
 [[ ${ENABLED} -ne 1 ]] && exit 0
 
+# Imports
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/.."
+source "$ROOT_DIR/src/themes.sh"
+
 # Input string
 INPUT=$(zramctl -n)
 
@@ -26,19 +30,6 @@ free_memory_gb=$(echo "$total_memory_gb - $avail_memory_gb" | bc)
 # Format the output
 # formatted_output="RAM:${free_memory_gb}G/${total_memory_gb}G Z:${size3}(${size2})/${size1}"
 
-# Define color codes
-R='\033[0;31m'
-G='\033[0;32m'
-Y='\033[0;33m'
-B='\033[0;34m'
-BLACK='\033[0;30m'
-DARK_GREY='\033[0;90m'
-
-BB='\033[44m'
-
-NC='\033[0m' # No Color
-
-
-formatted_output="${RESET}░ ${free_memory_gb}G/${total_memory_gb}G ${DARK_GREY}${size2}/${size1}${NC}"
+formatted_output="${RESET}░ #[fg=${THEME[blue]}]${free_memory_gb}G/${total_memory_gb}G #[fg=${THEME[green]}]${size2}/${size1}"
 # Print the result
 echo -e $formatted_output

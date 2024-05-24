@@ -58,7 +58,7 @@ right_append="$($SCRIPTS_PATH/right-append.sh)"
 #+--- Bars LEFT ---+
 # Session name
 # tmux set -g status-left "#[fg=${THEME[bblack]},bg=${THEME[blue]},bold] #{?client_prefix,󰠠 ,#[dim]󰤂 }#[bold,nodim]#S"
-tmux set -g status-left "#{?client_prefix,#[fg=${THEME[bblack]}]#[bg=${THEME[green]}]#[bold],#[fg=${THEME[blue]}]#[bg=${THEME[black]}]#[bold]} #S $RESET"
+tmux set -g status-left "#{?client_prefix,#[fg=${THEME[bblack]}]#[bg=${THEME[blue]}]#[bold],#[fg=${THEME[bblack]}]#[bg=${THEME[green]}]#[bold]} #S $RESET"
 # tmux set -g status-left "#[fg=#1F2335,bg=#6441a5,bold] #{?client_prefix,󰠠 ,#[dim]󰤂 }#[fg=#ffffff,bg=#6441a5,bold,nodim]#S $RESET"
 
 #+--- Windows ---+
