@@ -53,6 +53,7 @@ date_and_time="$($SCRIPTS_PATH/datetime-widget.sh)"
 current_path="#($SCRIPTS_PATH/path-widget.sh #{pane_current_path})"
 battery_status="#($SCRIPTS_PATH/battery-widget.sh)"
 zram="#($SCRIPTS_PATH/zram.sh)"
+vpn="#($SCRIPTS_PATH/vpn.sh)"
 right_append="#($SCRIPTS_PATH/right-append.sh)"
 
 #+--- Bars LEFT ---+
@@ -68,5 +69,5 @@ tmux set -g window-status-current-format "$RESET#[fg=${THEME[green]},bg=${THEME[
 tmux set -g window-status-format "$RESET#[fg=${THEME[foreground]}] #{?#{==:#{pane_current_command},ssh},󰣀,}${RESET} $window_number #W#[nobold,dim]#{?window_zoomed_flag, $zoom_number, $custom_pane} #[fg=${THEME[yellow]}]#{?window_last_flag,󰁯 , } "
 
 #+--- Bars RIGHT ---+
-tmux set -g status-right "$RESET $docker$battery_status$current_path$cmus_status$netspeed$git_status$wb_git_status$date_and_time$zram$right_append"
+tmux set -g status-right "$RESET $docker$battery_status$current_path$cmus_status$netspeed$vpn$git_status$wb_git_status$date_and_time$zram$right_append"
 tmux set -g window-status-separator ""
